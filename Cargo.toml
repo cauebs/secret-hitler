@@ -1,0 +1,7 @@
+[package]
+name = "secret-hitler"
+version = "0.1.0"
+authors = ["Cauê Baasch de Souza <cauebs@protonmail.com>"]
+
+[dependencies]
+rand = "*"
