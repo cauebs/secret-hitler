@@ -10,7 +10,7 @@ pub struct GovernmentTracker {
 }
 
 impl GovernmentTracker {
-    fn new() -> Self {
+    pub fn new() -> Self {
         Self {
             history: Vec::new(),
         }

@@ -1,3 +1,4 @@
+pub mod game;
 pub mod player;
 pub mod government;
 pub mod policy;

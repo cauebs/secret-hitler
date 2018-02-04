@@ -1,29 +1,27 @@
-pub enum Party {
-    Liberal,
-    Fascist,
-}
-
+#[derive(Debug)]
 pub enum SecretRole {
     Liberal,
     Fascist,
     Hitler,
 }
 
-pub struct PlayerTracker {
-    party_membership: Party,
-    secret_role: SecretRole,
-    not_hitler_confirmed: bool,
-}
-
 #[derive(PartialEq, Eq, Hash, Debug, Clone, Copy)]
-pub struct PlayerID(usize);
+pub struct PlayerID(pub usize);
 
 pub struct Player {
     pub id: PlayerID,
-    name: String,
-    info: Option<PlayerTracker>,
+    pub name: String,
+    pub secret_role: Option<SecretRole>,
+    pub not_hitler_confirmed: bool,
 }
 
 impl Player {
-
+    pub fn new(id: PlayerID, name: String) -> Self {
+        Self {
+            id: id,
+            name: name,
+            secret_role: None,
+            not_hitler_confirmed: false,
+        }
+    }
 }
